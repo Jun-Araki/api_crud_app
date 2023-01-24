@@ -6,7 +6,7 @@ RSpec.describe "V1::Posts", type: :request do
       subject { get(v1_posts_path) }
       before { create_list(:post, 3) }
 
-      it "投稿一覧を取得できること　　" do
+      it "投稿一覧を取得できること　 　" do
         subject
         json = JSON.parse(response.body)
         expect(response).to have_http_status(:ok)
